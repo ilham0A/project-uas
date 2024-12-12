@@ -7,14 +7,14 @@
     <div class="row">
         <div class="col-lg-6">
             <!-- Button trigger modal -->
+            <h3>Daftar Mahasiswa</h3>
+            <br>
             <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
                 Tambah Data Mahasiswa
             </button>
-            <h3>Daftar Mahasiswa</h3>
-            <a href="<?= BASEURL; ?>/mahasiswa/exportPDF" class="btn btn-primary">Export to PDF</a>
-            <!-- Tombol Print -->
-            <button onclick="printData()" class="btn btn-primary">Print</button>
-
+            <button onclick="printData()" class="btn btn-secondary float-right ml-1">Print</button>
+            <a href="<?php echo BASEURL; ?>/mahasiswa/exportPDF" class="btn btn-warning float-right ml-1">PDF</a>
+            <a href="<?= BASEURL; ?>/mahasiswa/exportExcel" class="btn btn-success float-right ml-1">Excel</a><br><br>
             <!-- Menambahkan ID printArea di sini -->
             <div id="printArea">
                 <ul class="list-group">
