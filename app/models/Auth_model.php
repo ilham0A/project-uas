@@ -11,9 +11,10 @@ class Auth_model
 
     public function getUser($username, $password)
     {
+        $passwordMD5 = md5($password);
         $this->db->query("SELECT * FROM login WHERE user = :username AND pass = :password");
         $this->db->bind('username', $username);
-        $this->db->bind('password', $password);
+        $this->db->bind('password', $passwordMD5);
         return $this->db->resultSet();
     }
 }

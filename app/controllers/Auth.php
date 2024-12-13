@@ -5,7 +5,7 @@ class Auth extends Controller
     public function index()
     {
         $data['judul'] = 'Login';
-        // $data['nama'] = $this->model('User_model')->getUser();
+        // Tampilkan pesan flash jika ada
         $this->view('login/index', $data);
     }
 
@@ -13,16 +13,23 @@ class Auth extends Controller
     {
         $username = $_POST['username'];
         $password = $_POST['password'];
+
+        // Memanggil model untuk mendapatkan data user berdasarkan username
         $data['login'] = $this->model('Auth_model')->getUser($username, $password);
 
         session_start();
         if ($data['login'] == null) {
-            header("Location: " . BASEURL . "404");
+            // Set flash message untuk kesalahan login
+            Flasher::setFlash('Username atau Password salah', '', 'danger');
+            header("Location: " . BASEURL . "/auth/index");
+            exit;
         } else {
-            foreach ($data['login'] as $row):
+            // Jika login berhasil
+            foreach ($data['login'] as $row) {
                 $_SESSION['nama'] = $row['nama'];
                 header("Location:" . BASEURL);
-            endforeach;
+                exit;
+            }
         }
     }
 

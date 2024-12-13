@@ -5,37 +5,6 @@ $(function () {
     $("#judulModal").html("Tambah Data Mahasiswa");
     $(".modal-footer button[type=submit]").html("Tambah Data");
   });
-
-  // $(".tombolModalUbah").on("click", function () {
-  //   $("#judulModal").html("Ubah Data Mahasiswa");
-  //   $(".modal-footer button[type=submit]").html("Ubah Data");
-
-  // $(document).on("click", ".tampilModalUbah", function () {
-  //   $("#judulModal").html("Ubah Data Mahasiswa");
-  //   $(".modal-footer button[type=submit]").html("Ubah Data");
-
-  //   $(".modal-body form").attr(
-  //     "action",
-  //     "http://localhost/2311500021_pbf1/public/mahasiswa/ubah"
-  //   );
-
-  //   const id = $(this).data("id");
-
-  //   $.ajak({
-  //     url: "http://localhost/2311500021_pbf1/public/mahasiswa/getUbah",
-  //     data: { id: id },
-  //     method: "post",
-  //     dataType: "json",
-  //     success: function (data) {
-  //       $("#nama").val(data.nama);
-  //       $("#nim").val(data.nim);
-  //       $("#email").val(data.email);
-  //       $("#jurusan").val(data.jurusan);
-  //       $("#id").val(data.id);
-  //     },
-  //   });
-  // });
-
   $(document).ready(function () {
     $(".tampilModalUbah").on("click", function () {
       $("#judulModal").text("Ubah Data Mahasiswa");
