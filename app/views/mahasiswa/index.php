@@ -9,7 +9,7 @@
             <!-- Button trigger modal -->
             <h3>Daftar Mahasiswa</h3>
             <br>
-            <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
+            <button type="button" class="btn btn-primary ml-1 tombolTambahData" data-toggle="modal" data-target="#formModal">
                 Tambah Data Mahasiswa
             </button>
             <button onclick="printData()" class="btn btn-secondary float-right ml-1">Print</button>
@@ -42,10 +42,13 @@
                     <?php endforeach; ?>
                 </ul>
             </div>
+            <br>
+            <a href="<?= BASEURL; ?>/Auth/logout" class="btn btn-primary float-left ml-1" onclick="return confirm('Apakah Anda Ingin Logout?');">
+                Logout
+            </a>
         </div>
     </div>
 </div>
-
 <!-- Modal -->
 <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
