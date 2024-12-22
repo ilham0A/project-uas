@@ -52,6 +52,7 @@
             </div>
             <!-- /.col -->
           </div>
+          <br>
         </form>
 
         <p class="mb-1">

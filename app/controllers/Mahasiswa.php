@@ -192,16 +192,4 @@ class Mahasiswa extends Controller
         $writer->save('php://output');
         exit;
     }
-
-
-
-    public function printPageContent()
-    {
-        // Ambil data mahasiswa dari model
-        $data['mhs'] = $this->model('Mahasiswa_model')->getAllMahasiswa();
-
-        // Kembalikan tabel data mahasiswa tanpa header/footer
-        header('Content-Type: text/html; charset=utf-8');
-        $this->view('mahasiswa/print', $data);
-    }
 }
