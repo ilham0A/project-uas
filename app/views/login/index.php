@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="<?= BASEURL ?>/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= BASEURL ?>/assets/dist/css/adminlte.min.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- Your code -->
 </head>
 
 <body class="hold-transition login-page">
@@ -24,7 +27,7 @@
     <!-- /.login-logo -->
     <div class="card">
       <div class="card-body login-card-body">
-        <p class="login-box-msg">Silahkan Login</p>
+        <p class="login-box-msg">Web Khusus Admin</p>
 
         <!-- Menampilkan flash message jika ada -->
         <?php Flasher::flash(); ?>
@@ -48,24 +51,23 @@
           </div>
           <div class="row">
             <div class="col-4">
+              <div class="g-recaptcha" data-sitekey="6Ldd5qMqAAAAAIm2pcaZF60lZooqR_Ew6l_S-1ZV"></div>
+              <br />
+            </div>
+            <!-- /.col -->
+          </div>
+          <div class="row">
+            <div class="col-4">
               <button type="submit" class="btn btn-primary btn-block">Sign In</button>
             </div>
             <!-- /.col -->
           </div>
           <br>
         </form>
-
-        <p class="mb-1">
-          <a href="forgot-password.html">I forgot my password</a>
-        </p>
-        <p class="mb-0">
-          <a href="register.html" class="text-center">Register a new membership</a>
-        </p>
       </div>
       <!-- /.login-card-body -->
     </div>
   </div>
-  <!-- /.login-box -->
 
   <!-- jQuery -->
   <script src="<?= BASEURL ?>/assets/plugins/jquery/jquery.min.js"></script>

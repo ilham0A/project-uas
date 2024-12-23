@@ -12,7 +12,6 @@
             <button type="button" class="btn btn-primary ml-1 tombolTambahData" data-toggle="modal" data-target="#formModal">
                 Tambah Data Mahasiswa
             </button>
-            <button onclick="printData()" class="btn btn-secondary float-right ml-1">Print</button>
             <a href="<?php echo BASEURL; ?>/mahasiswa/exportPDF" class="btn btn-warning float-right ml-1">PDF</a>
             <a href="<?= BASEURL; ?>/mahasiswa/exportExcel" class="btn btn-success float-right ml-1">Excel</a><br><br>
             <!-- Menambahkan ID printArea di sini -->
