@@ -49,20 +49,19 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-4">
-              <div class="g-recaptcha" data-sitekey="6Ldd5qMqAAAAAIm2pcaZF60lZooqR_Ew6l_S-1ZV"></div>
-              <br />
+          <div class="row align-items-center mb-3">
+            <div class="col-auto">
+              <input type="text" class="form-control form-control-sm" placeholder="Masukkan Captcha" name="captcha" style="width: 150px;">
             </div>
-            <!-- /.col -->
+            <div class="col-auto">
+              <img src="<?= BASEURL ?>/auth/captcha" alt="Captcha Image" style="height: 40px;">
+            </div>
           </div>
           <div class="row">
             <div class="col-4">
               <button type="submit" class="btn btn-primary btn-block">Sign In</button>
             </div>
-            <!-- /.col -->
           </div>
-          <br>
         </form>
       </div>
       <!-- /.login-card-body -->
