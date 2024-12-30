@@ -42,13 +42,14 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password" name="password" required>
+            <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
             <div class="input-group-append">
               <div class="input-group-text">
-                <span class="fas fa-lock"></span>
+                <span class="fas fa-eye" id="togglePassword" style="cursor: pointer;"></span>
               </div>
             </div>
           </div>
+
           <div class="row align-items-center mb-3">
             <div class="col-auto">
               <input type="text" class="form-control form-control-sm" placeholder="Masukkan Captcha" name="captcha" style="width: 150px;">
@@ -74,6 +75,7 @@
   <script src="<?= BASEURL ?>/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="<?= BASEURL ?>/assets/dist/js/adminlte.min.js"></script>
+  <script src="<?php echo BASEURL; ?>/js/password.js"></script>
 </body>
 
 </html>
