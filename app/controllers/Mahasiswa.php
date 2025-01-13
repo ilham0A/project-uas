@@ -85,19 +85,27 @@ class Mahasiswa extends Controller
 
         $pdf = new FPDF();
         $pdf->AddPage();
-        $pdf->SetFont('Arial', 'B', 12);
-        $pdf->Cell(200, 10, 'DATA MAHASISWA', 0, 0, 'C');
 
-        $pdf->SetFillColor(169, 169, 169);
-        $pdf->SetTextColor(255, 255, 255);
+        // Tambahkan judul dengan background abu gelap
+        $pdf->SetFont('Arial', 'B', 16);
+        $pdf->SetFillColor(105, 105, 105); // Warna abu gelap
+        $pdf->SetTextColor(255, 255, 255); // Warna teks putih
+        $pdf->Cell(0, 15, 'Laporan Data Mahasiswa', 0, 1, 'C', true);
+        $pdf->Ln(5); // Jarak setelah judul
+
+        // Header tabel
+        $pdf->SetFont('Arial', 'B', 12);
+        $pdf->SetFillColor(169, 169, 169); // Abu terang untuk header
+        $pdf->SetTextColor(255, 255, 255); // Warna teks putih
         $pdf->Cell(10, 10, 'No', 1, 0, 'C', true);
         $pdf->Cell(40, 10, 'Nama', 1, 0, 'C', true);
         $pdf->Cell(30, 10, 'NIM', 1, 0, 'C', true);
         $pdf->Cell(50, 10, 'Email', 1, 0, 'C', true);
         $pdf->Cell(50, 10, 'Jurusan', 1, 1, 'C', true);
 
+        // Isi tabel
         $pdf->SetFont('Arial', '', 12);
-        $pdf->SetTextColor(0, 0, 0);
+        $pdf->SetTextColor(0, 0, 0); // Warna teks hitam
         $no = 1;
         foreach ($dataMahasiswa as $mhs) {
             $pdf->Cell(10, 10, $no++, 1, 0, 'C');
@@ -110,6 +118,7 @@ class Mahasiswa extends Controller
 
         $pdf->Output('D', 'data_mahasiswa.pdf');
     }
+
 
     public function exportExcel()
     {
